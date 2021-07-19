@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="utf-8">
+    <title>LOOKATME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Social media licrary -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!------this is style------->
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#211E2F; 
+    color:#FFFFFF
+  }
+
+/* ----- custom my scroll -----*/  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #1A1924; 
+  }
+  /* ----- Handle -------- */
+  ::-webkit-scrollbar-thumb {
+    background: #3A364F; 
+    border-radius: 4px
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #737F8E; 
+  }
+
+/* ----- HEADING 1 STYLE -----*/
+  h1 {
+    color: #DACDBD;
+    letter-spacing: 15px;
+  }
+
+/* ----- Text link Style ----- */
+  a:link {
+    color: #7D4243;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #7D4243;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #AD987E;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+/* ----- Nav item style ------- */
+  .nav-item {
+    padding-right: 20px;
+  }
+
+/* ----- back to top button style-------- */
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background-color: #DACDBD;
+    color: #7D4243;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  #myBtn:hover {
+    background-color: #AD987E;
+  }
+
+/* ----- meet the team -----*/
+  .ourteam {
+    background-color: #DACDBD;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .column {
+    float: left;
+    width: 33.3%;;
+    margin-bottom: 25px;
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  /*----- 2 column ----*/
+  .twocolumn {
+      flex: 50%;
+      padding: 0px;
+    }
+    .twocolumn img {
+      width: 100%;
+    }
+
+  .card {
+    color: #2C293B;
+    background-color: #DACDBD;
+    border: none;
+    position: relative;
+    display: inline-block;
+    transition: all .25s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  }
+  .card:hover {
+    transition: all .25s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .card img{
+    border-radius: 0%;    
+    padding-bottom: 20px;
+    padding-top: 0px;
+  }
+  .card .img-top {
+    width:100%;
+    opacity: 0;
+    transition: all .25s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;    
+    z-index: 99;
+  }
+  .card:hover .img-top {
+    transition: all .25s ease-in-out;
+    opacity: 1;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .container {
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .name {
+    font-size: 25px;
+    font-weight: bold;
+
+  }
+
+  .title {
+    color: #7D4243;
+  }
+
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #211E2F;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+
+/* ----- FOOTER ------*/
+  .footer{
+    color: white;
+    background-color: #1A1924;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+/* ----- Social Media Style -----*/  
+  #footer a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  #footer a:hover {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
+  .fa {
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    width: 50px;
+    text-align: center;
+    margin: 5px 15px;
+  }
+
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+</style>
+</head>
+</html>
+
+<body>
+<!------NAVBAR CODE------->
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:#1A1924;">
+  
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="Web_design.html" style="padding-left:40px">
+    <img src="image/Logo_light_orange_pink.png" width="50px">
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav ml-auto" style="padding-right: 40px">
+    <li class="nav-item">
+      <a class="nav-link" href="Web_design.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about.html">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="gallery.html">Galerry</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="contact.html">Contact</a>
+    </li>
+
+    <!--SEARCH-->
+    <!--
+    <form class="form-inline" action="/action_page.php">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">@</span>
+        </div>
+          <input type="text" class="form-control" placeholder="Username">
+      </div>
+    </form> --->
+  </ul>
+</nav>
+
+<!------BACKGROUND IMAGE ------>
+<img src="image/10.jpg" style="width: 100%;">
+
+<!------ ABOUT US ----->
+  <h1 style="text-align:center; padding-top:100px; padding-bottom: 80px;">
+    ABOUT US
+  </h1>
+
+  <div class="row" style="margin: 0px; width:100%; padding-top: 40px;">
+    <div class="twocolumn" id=twocolumn style="">
+      <img src="image/2.jpg">    
+    </div> 
+
+    <div class="twocolumn" style="padding: 60px 80px; margin-top: auto; ">
+      <h2 style="color:#DACDBD"><b>Hoa Thần Vũ VNFC - HoaHoaVN</b></h2><br><br>
+      <p style="margin:0px">        
+        Hoahoavn là phân hội chính thức của Hoa Thần Vũ tại Việt Nam. <br>
+        Đây là web lưu trữ và cập nhật các tin tức của Hoa Thần Vũ cũng như của tổng hội. Các bài viết được dịch bởi subteam Hoahoavn. Hội thường xuyên tổ chức các project hiến máu, từ hiện và các buổi fanmeeting nên các bạn có thể truy cập các kênh của Hội để cập nhật thông thin một cách nhanh nhất.<br><br>
+        <b>Our facebook fanpages</b> <br>
+        Fanpage: <a href="https://www.facebook.com/HoaHoaVN">Hoa Thần Vũ VNFC - Hoahoavn华晨宇全球歌迷会越南分会</a><br>
+        Kho Vietsub: <a href="https://www.facebook.com/hcyvietsub">Hoa Thần Vũ VNFC - Hoahoavn - Kho video vietsub</a><br>
+        Confession: <a href="#demo">Hoa Thần Vũ VNFC - Hoahoavn - Hua and Hua's people</a><br><br>
+        <b>Our facebook groups</b><br>
+        Thảo luận: <a href="#demo">HoaHoaVN - Tàu bay đến Hoả Tinh</a><br>
+        Mua bán: <a href="#demo">Hoahoavn - Sao Hoả Plaza</a><br>
+        Hội Viên: <a href="#demo">ETVN2020</a><br><br>
+        <b>Our youtube channels</b><br>
+        Vietsub: <a href="https://www.youtube.com/channel/UCF_H0rZAr78xaN9V6OCdS0g">HoahoaVN 华晨宇越南歌迷会SUB</a><br>
+        Reupload: <a href="https://www.youtube.com/channel/UC1UiWyIGsuSJzXC9PrKzZXw">HoaHoaVN 华晨宇越南歌迷会</a>
+      </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin: 0px;width:100%; padding-top: 0px;">
+    <div class="twocolumn" style="padding-left: 80px; padding-right: 80px; margin-top: auto;">
+      <h1 style="padding-bottom: 20px;"><b>FAQ</b></h1>
+        <p>
+          Bạn vào page dĩ nhiên muốn tìm hiểu hoa hoa. Bạn có thể xem sơ bộ trước khi pm cho page nhé: <br>
+            - Ở wiki thông tin cơ bản về Hoa Thần Vũ một cách khá chi tiết: wikipedia <br>
+            - Link album: <a href="#demo">https://goo.Gl/gaqqyy</a><br><br>
+          Hai vấn đề các bạn mess cho page nhiều nhất chính là: <br>
+            - Hoa hiện tại không có bạn gái, nên ngườI đó dĩ nhiên không phải Đặng Tử Kì nhé! Page đã post rõ ở đây: <a href="#demo">https://goo.Gl/gftzak</a><br>
+            - Nhan sắc của hoa thì tự các bạn muốn thế nào cũng được, bọn ad luôn nói “tôn trọng hoa, trước giờ hoa chưa nóI bất cứ gì về chuyện pttm và nhan sắc cổ phiếu của hoa thì tự bạn cảm nhận thôi”: <a href="#demo">https://goo.Gl/qaebcx</a>
+        </p>
+    </div>
+
+    <div class="twocolumn" id=twocolumn style="">
+      <img src="image/8.jpg">    
+    </div>
+  </div>
+
+<!------ OUR TEAM ----->
+<section style="padding-top: 80px; padding-bottom:80px;">
+  <div class="ourteam">
+    <h1 style="padding-bottom: 20px; padding-top: 20px; text-align: center; color: #7D4243;"><b>OUR TEAM</b></h1> 
+    <div class="row" style="margin: 0px; width: 100%; padding-left: 15px; padding-right: 15px;">     
+       <div class="column">
+         <div class="card">
+           <img src="image/team01.jpg" class="center">
+           <img src="image/cat4.jpg" class="img-top">
+           <div class="container">
+             <p class="name">Ngơ</p>
+             <p class="title">Translator</p> 
+           </div>
+         </div>
+       </div>
+
+       <div class="column">
+         <div class="card">
+           <img src="image/team04.jpg" class="center">
+           <img src="image/cat5.jpg" class="img-top">
+           <div class="container">
+             <p class="name">Uhm Kage</p>
+             <p class="title">Typesettor</p>
+           </div>
+         </div>
+       </div>
+         
+       <div class="column">
+         <div class="card">
+           <img src="image/team05.jpg" class="center">
+           <img src="image/cat3.jpg" class="img-top">
+           <div class="container">
+             <p class="name">Thạo</p>
+             <p class="title">Editor</p>
+           </div>
+         </div>
+       </div>    
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer" id="footer">
+  <h3 style="color: #DACDBD"><b>Hoa Thần Vũ VNFC - HoaHoaVN</b> </h3>
+  <p style="font-size: 15px; color: #7D4243;">Phân hội chính thức và duy nhất của Hoa Thần Vũ tại Việt Nam</p>
+  <br><br>
+
+  <p style="margin:0px;">Follow us:</p>
+
+  <!-- Add font awesome icons -->  
+  <a href="https://www.facebook.com/HoaHoaVN" class="fa fa-facebook" target="_blank" rel="noopener noreferrer" style="color:white;"></a>
+  <a href="https://www.youtube.com/channel/UCF_H0rZAr78xaN9V6OCdS0g" class="fa fa-youtube" target="_blank" rel="noopener noreferrer" style="color:white;"></a>
+  <a href="https://www.youtube.com/channel/UC1UiWyIGsuSJzXC9PrKzZXw" class="fa fa-youtube" target="_blank" rel="noopener noreferrer" style="color:white;"></a>
+  <a href="https://www.instagram.com/hcyvietnamfanpage/" class="fa fa-instagram" target="_blank" rel="noopener noreferrer" style="color:white;"></a>
+
+  <p style="color: #3A364F; font-size:12px; margin:0px">2021 Redesign by Hai Sam - Hoahoavn</p>
+</div>
+
+<!---- Scroll to top button ---->
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><b>Top</b></button>
+  <script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+</body>
